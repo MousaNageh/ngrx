@@ -5,7 +5,7 @@ export interface Item {
     price: number;
     // type: string;
   }
-  export interface Product extends Item {
+export interface Product extends Item {
     is_wishlist: boolean;
     product_images: { image: string }[] | null;
     discount_price: number | null;
@@ -13,5 +13,4 @@ export interface Item {
     rate: number | null;
     product_type: string | null | { id: string; product_type: string };
     product_intensity: string | null | { id: string; intensity: string };
-  }
-  
+}

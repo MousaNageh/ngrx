@@ -1,0 +1,15 @@
+{{(products$ |async)?.length}}
+<p *ngIf="(laoding$|async)">laoding</p>
+<section>
+    <div *ngFor="let product of products$ |async" style="
+    border : 2px solid red;
+    margin: 20px;
+    padding: 20px;
+    " > 
+        <img [src]="'http://staging.freaksrepublic.com:8065'+product.main_image" alt="">
+        <h3>{{product.id}}</h3>
+        <p>{{product.name}}</p>
+    </div>
+    <h1  *ngIf="next$|async" (click)="laodMore()">{{next$|async}}</h1>
+</section>
+

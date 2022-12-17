@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ProductComponent } from './product/product.component';
-import { ProductResolver } from './services/product.resolver';
+import { ProductListComponent } from './product-list/product-list.component';
+import { ProductResolver } from './resolvers/product.resolver';
+
 
 const routes: Routes = [
   {
     path:"",
-    component:ProductComponent,
+    component:ProductListComponent,
     resolve:{
       products:ProductResolver
     }
@@ -14,7 +15,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes),
+  ],
   exports: [RouterModule]
 })
 export class ProductRoutingModule { }
