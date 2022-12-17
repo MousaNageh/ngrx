@@ -1,0 +1,1 @@
+export const AboutUsStoreName = 'About-us'

@@ -1,0 +1,8 @@
+<div>
+    {{(errors$|async)?.status|json}}
+</div>
+________________________________________________
+<p *ngIf="isLoading$ | async">loading </p>
+<div *ngIf="!(isLoading$ | async)">
+    <div > {{(aboutUs$|async)|json}} </div>
+</div>
